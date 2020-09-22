@@ -43,10 +43,11 @@ install.packages("palmerpenguins")
 data("penguins", package = "palmerpenguins")
 
 important variables in the penguins data set include species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex, year 
-
+```{r}
 nrow (penguins)
 ncol (penguins)
 There are 344 rows and 8 columns in my dataset
+```
 
 `r mean(flipper_length_mm)`
 
@@ -55,10 +56,8 @@ mean(x, trim = 0, na.rm=TRUE)
 ```{r}
 as.numeric(pull(penguins, flipper_length_mm))
 ```
+
+```{r}
    p <- ggplot(penguins, aes(bill_length_mm, flipper_length_mm))
    p+geom_point(aes(color=species))
-   
-   
-
-
-The mean is `r mean(flipper_length_mm)`.
+```   
