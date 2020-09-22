@@ -1,4 +1,12 @@
-# meb2309HW1updated
+---
+title: "HW1 Re-Do document"
+output:
+  html_document: 
+    keep_md: yes
+  pdf_document: default
+---
+
+I'm an R Markdown document! 
 
 My Solution to HW1
 
@@ -43,22 +51,20 @@ install.packages("palmerpenguins")
 data("penguins", package = "palmerpenguins")
 
 important variables in the penguins data set include species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex, year 
+
 ```{r}
 nrow (penguins)
 ncol (penguins)
-There are 344 rows and 8 columns in my dataset
 ```
 
-`r mean(flipper_length_mm)`
-
-mean(x, trim = 0, na.rm=TRUE)
+There are 344 rows and 8 columns in my dataset
 
 ```{r}
 as.numeric(pull(penguins, flipper_length_mm))
+mean(x, trim = 0, na.rm=TRUE)
 ```
 
 ```{r}
-library (tidyverse)
-   p <- ggplot(penguins, aes(bill_length_mm, flipper_length_mm))
+  p <- ggplot(penguins, aes(bill_length_mm, flipper_length_mm))
    p+geom_point(aes(color=species))
-```   
+```
